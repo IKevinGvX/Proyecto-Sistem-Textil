@@ -1,0 +1,6 @@
+@TextilSwagger_HostAddress = http://localhost:5001
+
+GET {{TextilSwagger_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,1150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://localhost:33454" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://localhost:33454" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://localhost:33454">
+      <s:import namespace="http://tempuri.org/Textil.xsd" />
+      <s:import schemaLocation="https://localhost:44384/test.asmx?schema=Textil" namespace="http://tempuri.org/Textil.xsd" />
+      <s:element name="GetDataAlmacen">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetDataAlmacenResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDataAlmacenResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/Textil.xsd" name="namespace" />
+                <s:attribute fixed="AlmacenDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataByIDAlmacen">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataByIDAlmacenResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDataByIDAlmacenResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/Textil.xsd" name="namespace" />
+                <s:attribute fixed="AlmacenDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataClientes">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetDataClientesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDataClientesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/Textil.xsd" name="namespace" />
+                <s:attribute fixed="ClientesDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataByClientesID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idcliente" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataByClientesIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDataByClientesIDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/Textil.xsd" name="namespace" />
+                <s:attribute fixed="ClientesDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataDetallesManhy">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetDataDetallesManhyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDataDetallesManhyResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/Textil.xsd" name="namespace" />
+                <s:attribute fixed="detalles_many_entregasDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataByIDManyDetalles">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="iddetalles" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataByIDManyDetallesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDataByIDManyDetallesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/Textil.xsd" name="namespace" />
+                <s:attribute fixed="detalles_many_entregasDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataDetallePedidoE">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetDataDetallePedidoEResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDataDetallePedidoEResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/Textil.xsd" name="namespace" />
+                <s:attribute fixed="detalles_pedidosDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataDetallePedidoCliente">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetDataDetallePedidoClienteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDataDetallePedidoClienteResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/Textil.xsd" name="namespace" />
+                <s:attribute fixed="DetallesPedidoClienteDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataByIDDetalleCliente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="cliente" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataByIDDetalleClienteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDataByIDDetalleClienteResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/Textil.xsd" name="namespace" />
+                <s:attribute fixed="DetallesPedidoClienteDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataEmpleados">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetDataEmpleadosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDataEmpleadosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/Textil.xsd" name="namespace" />
+                <s:attribute fixed="EmpleadosDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataByIDEmpleados">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="employ" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataByIDEmpleadosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDataByIDEmpleadosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/Textil.xsd" name="namespace" />
+                <s:attribute fixed="EmpleadosDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataEntradasInventario">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetDataEntradasInventarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDataEntradasInventarioResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/Textil.xsd" name="namespace" />
+                <s:attribute fixed="EntradasInventarioDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataByEntradasID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="entre" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataByEntradasIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDataByEntradasIDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/Textil.xsd" name="namespace" />
+                <s:attribute fixed="EntradasInventarioDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataEntregas">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetDataEntregasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDataEntregasResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/Textil.xsd" name="namespace" />
+                <s:attribute fixed="EntregasDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataByIDEntregas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="entreg" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataByIDEntregasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDataByIDEntregasResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/Textil.xsd" name="namespace" />
+                <s:attribute fixed="EntregasDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataPedidoProveedor">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetDataPedidoProveedorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDataPedidoProveedorResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/Textil.xsd" name="namespace" />
+                <s:attribute fixed="Pedidos_ProveedoresDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataByIDProveedores">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pedidos" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataByIDProveedoresResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDataByIDProveedoresResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/Textil.xsd" name="namespace" />
+                <s:attribute fixed="Pedidos_ProveedoresDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataProductos">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetDataProductosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDataProductosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/Textil.xsd" name="namespace" />
+                <s:attribute fixed="ProductosDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataByIDProducto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pro" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataByIDProductoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDataByIDProductoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/Textil.xsd" name="namespace" />
+                <s:attribute fixed="ProductosDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataProveedores">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetDataProveedoresResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDataProveedoresResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/Textil.xsd" name="namespace" />
+                <s:attribute fixed="ProveedoresDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataByIDProveedore">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="prove" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataByIDProveedoreResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDataByIDProveedoreResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/Textil.xsd" name="namespace" />
+                <s:attribute fixed="ProveedoresDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataSalidaINventario">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetDataSalidaINventarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDataSalidaINventarioResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/Textil.xsd" name="namespace" />
+                <s:attribute fixed="SalidasInventarioDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataBySalidaInventarioID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataBySalidaInventarioIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDataBySalidaInventarioIDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/Textil.xsd" name="namespace" />
+                <s:attribute fixed="SalidasInventarioDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetDataAlmacenSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDataAlmacen" />
+  </wsdl:message>
+  <wsdl:message name="GetDataAlmacenSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDataAlmacenResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDataByIDAlmacenSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDataByIDAlmacen" />
+  </wsdl:message>
+  <wsdl:message name="GetDataByIDAlmacenSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDataByIDAlmacenResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDataClientesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDataClientes" />
+  </wsdl:message>
+  <wsdl:message name="GetDataClientesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDataClientesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDataByClientesIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDataByClientesID" />
+  </wsdl:message>
+  <wsdl:message name="GetDataByClientesIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDataByClientesIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDataDetallesManhySoapIn">
+    <wsdl:part name="parameters" element="tns:GetDataDetallesManhy" />
+  </wsdl:message>
+  <wsdl:message name="GetDataDetallesManhySoapOut">
+    <wsdl:part name="parameters" element="tns:GetDataDetallesManhyResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDataByIDManyDetallesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDataByIDManyDetalles" />
+  </wsdl:message>
+  <wsdl:message name="GetDataByIDManyDetallesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDataByIDManyDetallesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDataDetallePedidoESoapIn">
+    <wsdl:part name="parameters" element="tns:GetDataDetallePedidoE" />
+  </wsdl:message>
+  <wsdl:message name="GetDataDetallePedidoESoapOut">
+    <wsdl:part name="parameters" element="tns:GetDataDetallePedidoEResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDataDetallePedidoClienteSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDataDetallePedidoCliente" />
+  </wsdl:message>
+  <wsdl:message name="GetDataDetallePedidoClienteSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDataDetallePedidoClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDataByIDDetalleClienteSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDataByIDDetalleCliente" />
+  </wsdl:message>
+  <wsdl:message name="GetDataByIDDetalleClienteSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDataByIDDetalleClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDataEmpleadosSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDataEmpleados" />
+  </wsdl:message>
+  <wsdl:message name="GetDataEmpleadosSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDataEmpleadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDataByIDEmpleadosSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDataByIDEmpleados" />
+  </wsdl:message>
+  <wsdl:message name="GetDataByIDEmpleadosSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDataByIDEmpleadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDataEntradasInventarioSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDataEntradasInventario" />
+  </wsdl:message>
+  <wsdl:message name="GetDataEntradasInventarioSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDataEntradasInventarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDataByEntradasIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDataByEntradasID" />
+  </wsdl:message>
+  <wsdl:message name="GetDataByEntradasIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDataByEntradasIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDataEntregasSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDataEntregas" />
+  </wsdl:message>
+  <wsdl:message name="GetDataEntregasSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDataEntregasResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDataByIDEntregasSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDataByIDEntregas" />
+  </wsdl:message>
+  <wsdl:message name="GetDataByIDEntregasSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDataByIDEntregasResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDataPedidoProveedorSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDataPedidoProveedor" />
+  </wsdl:message>
+  <wsdl:message name="GetDataPedidoProveedorSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDataPedidoProveedorResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDataByIDProveedoresSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDataByIDProveedores" />
+  </wsdl:message>
+  <wsdl:message name="GetDataByIDProveedoresSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDataByIDProveedoresResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDataProductosSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDataProductos" />
+  </wsdl:message>
+  <wsdl:message name="GetDataProductosSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDataProductosResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDataByIDProductoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDataByIDProducto" />
+  </wsdl:message>
+  <wsdl:message name="GetDataByIDProductoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDataByIDProductoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDataProveedoresSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDataProveedores" />
+  </wsdl:message>
+  <wsdl:message name="GetDataProveedoresSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDataProveedoresResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDataByIDProveedoreSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDataByIDProveedore" />
+  </wsdl:message>
+  <wsdl:message name="GetDataByIDProveedoreSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDataByIDProveedoreResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDataSalidaINventarioSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDataSalidaINventario" />
+  </wsdl:message>
+  <wsdl:message name="GetDataSalidaINventarioSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDataSalidaINventarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDataBySalidaInventarioIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDataBySalidaInventarioID" />
+  </wsdl:message>
+  <wsdl:message name="GetDataBySalidaInventarioIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDataBySalidaInventarioIDResponse" />
+  </wsdl:message>
+  <wsdl:portType name="testSoap">
+    <wsdl:operation name="GetDataAlmacen">
+      <wsdl:input message="tns:GetDataAlmacenSoapIn" />
+      <wsdl:output message="tns:GetDataAlmacenSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataByIDAlmacen">
+      <wsdl:input message="tns:GetDataByIDAlmacenSoapIn" />
+      <wsdl:output message="tns:GetDataByIDAlmacenSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataClientes">
+      <wsdl:input message="tns:GetDataClientesSoapIn" />
+      <wsdl:output message="tns:GetDataClientesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataByClientesID">
+      <wsdl:input message="tns:GetDataByClientesIDSoapIn" />
+      <wsdl:output message="tns:GetDataByClientesIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataDetallesManhy">
+      <wsdl:input message="tns:GetDataDetallesManhySoapIn" />
+      <wsdl:output message="tns:GetDataDetallesManhySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataByIDManyDetalles">
+      <wsdl:input message="tns:GetDataByIDManyDetallesSoapIn" />
+      <wsdl:output message="tns:GetDataByIDManyDetallesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataDetallePedidoE">
+      <wsdl:input message="tns:GetDataDetallePedidoESoapIn" />
+      <wsdl:output message="tns:GetDataDetallePedidoESoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataDetallePedidoCliente">
+      <wsdl:input message="tns:GetDataDetallePedidoClienteSoapIn" />
+      <wsdl:output message="tns:GetDataDetallePedidoClienteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataByIDDetalleCliente">
+      <wsdl:input message="tns:GetDataByIDDetalleClienteSoapIn" />
+      <wsdl:output message="tns:GetDataByIDDetalleClienteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataEmpleados">
+      <wsdl:input message="tns:GetDataEmpleadosSoapIn" />
+      <wsdl:output message="tns:GetDataEmpleadosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataByIDEmpleados">
+      <wsdl:input message="tns:GetDataByIDEmpleadosSoapIn" />
+      <wsdl:output message="tns:GetDataByIDEmpleadosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataEntradasInventario">
+      <wsdl:input message="tns:GetDataEntradasInventarioSoapIn" />
+      <wsdl:output message="tns:GetDataEntradasInventarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataByEntradasID">
+      <wsdl:input message="tns:GetDataByEntradasIDSoapIn" />
+      <wsdl:output message="tns:GetDataByEntradasIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataEntregas">
+      <wsdl:input message="tns:GetDataEntregasSoapIn" />
+      <wsdl:output message="tns:GetDataEntregasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataByIDEntregas">
+      <wsdl:input message="tns:GetDataByIDEntregasSoapIn" />
+      <wsdl:output message="tns:GetDataByIDEntregasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataPedidoProveedor">
+      <wsdl:input message="tns:GetDataPedidoProveedorSoapIn" />
+      <wsdl:output message="tns:GetDataPedidoProveedorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataByIDProveedores">
+      <wsdl:input message="tns:GetDataByIDProveedoresSoapIn" />
+      <wsdl:output message="tns:GetDataByIDProveedoresSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataProductos">
+      <wsdl:input message="tns:GetDataProductosSoapIn" />
+      <wsdl:output message="tns:GetDataProductosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataByIDProducto">
+      <wsdl:input message="tns:GetDataByIDProductoSoapIn" />
+      <wsdl:output message="tns:GetDataByIDProductoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataProveedores">
+      <wsdl:input message="tns:GetDataProveedoresSoapIn" />
+      <wsdl:output message="tns:GetDataProveedoresSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataByIDProveedore">
+      <wsdl:input message="tns:GetDataByIDProveedoreSoapIn" />
+      <wsdl:output message="tns:GetDataByIDProveedoreSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataSalidaINventario">
+      <wsdl:input message="tns:GetDataSalidaINventarioSoapIn" />
+      <wsdl:output message="tns:GetDataSalidaINventarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataBySalidaInventarioID">
+      <wsdl:input message="tns:GetDataBySalidaInventarioIDSoapIn" />
+      <wsdl:output message="tns:GetDataBySalidaInventarioIDSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="testSoap" type="tns:testSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetDataAlmacen">
+      <soap:operation soapAction="http://localhost:33454/GetDataAlmacen" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataByIDAlmacen">
+      <soap:operation soapAction="http://localhost:33454/GetDataByIDAlmacen" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataClientes">
+      <soap:operation soapAction="http://localhost:33454/GetDataClientes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataByClientesID">
+      <soap:operation soapAction="http://localhost:33454/GetDataByClientesID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataDetallesManhy">
+      <soap:operation soapAction="http://localhost:33454/GetDataDetallesManhy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataByIDManyDetalles">
+      <soap:operation soapAction="http://localhost:33454/GetDataByIDManyDetalles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataDetallePedidoE">
+      <soap:operation soapAction="http://localhost:33454/GetDataDetallePedidoE" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataDetallePedidoCliente">
+      <soap:operation soapAction="http://localhost:33454/GetDataDetallePedidoCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataByIDDetalleCliente">
+      <soap:operation soapAction="http://localhost:33454/GetDataByIDDetalleCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataEmpleados">
+      <soap:operation soapAction="http://localhost:33454/GetDataEmpleados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataByIDEmpleados">
+      <soap:operation soapAction="http://localhost:33454/GetDataByIDEmpleados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataEntradasInventario">
+      <soap:operation soapAction="http://localhost:33454/GetDataEntradasInventario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataByEntradasID">
+      <soap:operation soapAction="http://localhost:33454/GetDataByEntradasID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataEntregas">
+      <soap:operation soapAction="http://localhost:33454/GetDataEntregas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataByIDEntregas">
+      <soap:operation soapAction="http://localhost:33454/GetDataByIDEntregas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataPedidoProveedor">
+      <soap:operation soapAction="http://localhost:33454/GetDataPedidoProveedor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataByIDProveedores">
+      <soap:operation soapAction="http://localhost:33454/GetDataByIDProveedores" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataProductos">
+      <soap:operation soapAction="http://localhost:33454/GetDataProductos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataByIDProducto">
+      <soap:operation soapAction="http://localhost:33454/GetDataByIDProducto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataProveedores">
+      <soap:operation soapAction="http://localhost:33454/GetDataProveedores" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataByIDProveedore">
+      <soap:operation soapAction="http://localhost:33454/GetDataByIDProveedore" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataSalidaINventario">
+      <soap:operation soapAction="http://localhost:33454/GetDataSalidaINventario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataBySalidaInventarioID">
+      <soap:operation soapAction="http://localhost:33454/GetDataBySalidaInventarioID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="testSoap12" type="tns:testSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetDataAlmacen">
+      <soap12:operation soapAction="http://localhost:33454/GetDataAlmacen" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataByIDAlmacen">
+      <soap12:operation soapAction="http://localhost:33454/GetDataByIDAlmacen" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataClientes">
+      <soap12:operation soapAction="http://localhost:33454/GetDataClientes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataByClientesID">
+      <soap12:operation soapAction="http://localhost:33454/GetDataByClientesID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataDetallesManhy">
+      <soap12:operation soapAction="http://localhost:33454/GetDataDetallesManhy" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataByIDManyDetalles">
+      <soap12:operation soapAction="http://localhost:33454/GetDataByIDManyDetalles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataDetallePedidoE">
+      <soap12:operation soapAction="http://localhost:33454/GetDataDetallePedidoE" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataDetallePedidoCliente">
+      <soap12:operation soapAction="http://localhost:33454/GetDataDetallePedidoCliente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataByIDDetalleCliente">
+      <soap12:operation soapAction="http://localhost:33454/GetDataByIDDetalleCliente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataEmpleados">
+      <soap12:operation soapAction="http://localhost:33454/GetDataEmpleados" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataByIDEmpleados">
+      <soap12:operation soapAction="http://localhost:33454/GetDataByIDEmpleados" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataEntradasInventario">
+      <soap12:operation soapAction="http://localhost:33454/GetDataEntradasInventario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataByEntradasID">
+      <soap12:operation soapAction="http://localhost:33454/GetDataByEntradasID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataEntregas">
+      <soap12:operation soapAction="http://localhost:33454/GetDataEntregas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataByIDEntregas">
+      <soap12:operation soapAction="http://localhost:33454/GetDataByIDEntregas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataPedidoProveedor">
+      <soap12:operation soapAction="http://localhost:33454/GetDataPedidoProveedor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataByIDProveedores">
+      <soap12:operation soapAction="http://localhost:33454/GetDataByIDProveedores" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataProductos">
+      <soap12:operation soapAction="http://localhost:33454/GetDataProductos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataByIDProducto">
+      <soap12:operation soapAction="http://localhost:33454/GetDataByIDProducto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataProveedores">
+      <soap12:operation soapAction="http://localhost:33454/GetDataProveedores" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataByIDProveedore">
+      <soap12:operation soapAction="http://localhost:33454/GetDataByIDProveedore" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataSalidaINventario">
+      <soap12:operation soapAction="http://localhost:33454/GetDataSalidaINventario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataBySalidaInventarioID">
+      <soap12:operation soapAction="http://localhost:33454/GetDataBySalidaInventarioID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="test">
+    <wsdl:port name="testSoap" binding="tns:testSoap">
+      <soap:address location="https://localhost:44384/test.asmx" />
+    </wsdl:port>
+    <wsdl:port name="testSoap12" binding="tns:testSoap12">
+      <soap12:address location="https://localhost:44384/test.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

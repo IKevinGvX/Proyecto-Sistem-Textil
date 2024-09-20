@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:54854/ServicioTextil.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:54854/ServicioTextil.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ServicioTextil_validarusuarioempleado_InputMessage">
+    <wsdl:part name="parameters" element="tns:validarusuarioempleado" />
+  </wsdl:message>
+  <wsdl:message name="ServicioTextil_validarusuarioempleado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:validarusuarioempleadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServicioTextil_ValidacionProveedor_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidacionProveedor" />
+  </wsdl:message>
+  <wsdl:message name="ServicioTextil_ValidacionProveedor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidacionProveedorResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServicioTextil_EstadoPedidoCompra_InputMessage">
+    <wsdl:part name="parameters" element="tns:EstadoPedidoCompra" />
+  </wsdl:message>
+  <wsdl:message name="ServicioTextil_EstadoPedidoCompra_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EstadoPedidoCompraResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServicioTextil_detallepedido_InputMessage">
+    <wsdl:part name="parameters" element="tns:detallepedido" />
+  </wsdl:message>
+  <wsdl:message name="ServicioTextil_detallepedido_OutputMessage">
+    <wsdl:part name="parameters" element="tns:detallepedidoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServicioTextil_entradainventario_InputMessage">
+    <wsdl:part name="parameters" element="tns:entradainventario" />
+  </wsdl:message>
+  <wsdl:message name="ServicioTextil_entradainventario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:entradainventarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServicioTextil_almacen_InputMessage">
+    <wsdl:part name="parameters" element="tns:almacen" />
+  </wsdl:message>
+  <wsdl:message name="ServicioTextil_almacen_OutputMessage">
+    <wsdl:part name="parameters" element="tns:almacenResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServicioTextil_Productos_InputMessage">
+    <wsdl:part name="parameters" element="tns:Productos" />
+  </wsdl:message>
+  <wsdl:message name="ServicioTextil_Productos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProductosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServicioTextil_salidainventario_InputMessage">
+    <wsdl:part name="parameters" element="tns:salidainventario" />
+  </wsdl:message>
+  <wsdl:message name="ServicioTextil_salidainventario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:salidainventarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServicioTextil_Empleado_InputMessage">
+    <wsdl:part name="parameters" element="tns:Empleado" />
+  </wsdl:message>
+  <wsdl:message name="ServicioTextil_Empleado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EmpleadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServicioTextil_Clientes_InputMessage">
+    <wsdl:part name="parameters" element="tns:Clientes" />
+  </wsdl:message>
+  <wsdl:message name="ServicioTextil_Clientes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ClientesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServicioTextil_DetallesPedidoCliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:DetallesPedidoCliente" />
+  </wsdl:message>
+  <wsdl:message name="ServicioTextil_DetallesPedidoCliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DetallesPedidoClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServicioTextil_Entregas_InputMessage">
+    <wsdl:part name="parameters" element="tns:Entregas" />
+  </wsdl:message>
+  <wsdl:message name="ServicioTextil_Entregas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EntregasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServicioTextil_detallemany_entrega_InputMessage">
+    <wsdl:part name="parameters" element="tns:detallemany_entrega" />
+  </wsdl:message>
+  <wsdl:message name="ServicioTextil_detallemany_entrega_OutputMessage">
+    <wsdl:part name="parameters" element="tns:detallemany_entregaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServicioTextil">
+    <wsdl:operation name="validarusuarioempleado">
+      <wsdl:input wsaw:Action="http://tempuri.org/ServicioTextil/validarusuarioempleado" message="tns:ServicioTextil_validarusuarioempleado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ServicioTextil/validarusuarioempleadoResponse" message="tns:ServicioTextil_validarusuarioempleado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidacionProveedor">
+      <wsdl:input wsaw:Action="http://tempuri.org/ServicioTextil/ValidacionProveedor" message="tns:ServicioTextil_ValidacionProveedor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ServicioTextil/ValidacionProveedorResponse" message="tns:ServicioTextil_ValidacionProveedor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EstadoPedidoCompra">
+      <wsdl:input wsaw:Action="http://tempuri.org/ServicioTextil/EstadoPedidoCompra" message="tns:ServicioTextil_EstadoPedidoCompra_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ServicioTextil/EstadoPedidoCompraResponse" message="tns:ServicioTextil_EstadoPedidoCompra_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="detallepedido">
+      <wsdl:input wsaw:Action="http://tempuri.org/ServicioTextil/detallepedido" message="tns:ServicioTextil_detallepedido_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ServicioTextil/detallepedidoResponse" message="tns:ServicioTextil_detallepedido_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="entradainventario">
+      <wsdl:input wsaw:Action="http://tempuri.org/ServicioTextil/entradainventario" message="tns:ServicioTextil_entradainventario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ServicioTextil/entradainventarioResponse" message="tns:ServicioTextil_entradainventario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="almacen">
+      <wsdl:input wsaw:Action="http://tempuri.org/ServicioTextil/almacen" message="tns:ServicioTextil_almacen_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ServicioTextil/almacenResponse" message="tns:ServicioTextil_almacen_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Productos">
+      <wsdl:input wsaw:Action="http://tempuri.org/ServicioTextil/Productos" message="tns:ServicioTextil_Productos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ServicioTextil/ProductosResponse" message="tns:ServicioTextil_Productos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="salidainventario">
+      <wsdl:input wsaw:Action="http://tempuri.org/ServicioTextil/salidainventario" message="tns:ServicioTextil_salidainventario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ServicioTextil/salidainventarioResponse" message="tns:ServicioTextil_salidainventario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Empleado">
+      <wsdl:input wsaw:Action="http://tempuri.org/ServicioTextil/Empleado" message="tns:ServicioTextil_Empleado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ServicioTextil/EmpleadoResponse" message="tns:ServicioTextil_Empleado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Clientes">
+      <wsdl:input wsaw:Action="http://tempuri.org/ServicioTextil/Clientes" message="tns:ServicioTextil_Clientes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ServicioTextil/ClientesResponse" message="tns:ServicioTextil_Clientes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DetallesPedidoCliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/ServicioTextil/DetallesPedidoCliente" message="tns:ServicioTextil_DetallesPedidoCliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ServicioTextil/DetallesPedidoClienteResponse" message="tns:ServicioTextil_DetallesPedidoCliente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Entregas">
+      <wsdl:input wsaw:Action="http://tempuri.org/ServicioTextil/Entregas" message="tns:ServicioTextil_Entregas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ServicioTextil/EntregasResponse" message="tns:ServicioTextil_Entregas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="detallemany_entrega">
+      <wsdl:input wsaw:Action="http://tempuri.org/ServicioTextil/detallemany_entrega" message="tns:ServicioTextil_detallemany_entrega_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ServicioTextil/detallemany_entregaResponse" message="tns:ServicioTextil_detallemany_entrega_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ServicioTextil" type="tns:ServicioTextil">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="validarusuarioempleado">
+      <soap:operation soapAction="http://tempuri.org/ServicioTextil/validarusuarioempleado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidacionProveedor">
+      <soap:operation soapAction="http://tempuri.org/ServicioTextil/ValidacionProveedor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EstadoPedidoCompra">
+      <soap:operation soapAction="http://tempuri.org/ServicioTextil/EstadoPedidoCompra" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="detallepedido">
+      <soap:operation soapAction="http://tempuri.org/ServicioTextil/detallepedido" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="entradainventario">
+      <soap:operation soapAction="http://tempuri.org/ServicioTextil/entradainventario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="almacen">
+      <soap:operation soapAction="http://tempuri.org/ServicioTextil/almacen" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Productos">
+      <soap:operation soapAction="http://tempuri.org/ServicioTextil/Productos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="salidainventario">
+      <soap:operation soapAction="http://tempuri.org/ServicioTextil/salidainventario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Empleado">
+      <soap:operation soapAction="http://tempuri.org/ServicioTextil/Empleado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Clientes">
+      <soap:operation soapAction="http://tempuri.org/ServicioTextil/Clientes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DetallesPedidoCliente">
+      <soap:operation soapAction="http://tempuri.org/ServicioTextil/DetallesPedidoCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Entregas">
+      <soap:operation soapAction="http://tempuri.org/ServicioTextil/Entregas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="detallemany_entrega">
+      <soap:operation soapAction="http://tempuri.org/ServicioTextil/detallemany_entrega" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_ServicioTextil" binding="tns:BasicHttpBinding_ServicioTextil">
+      <soap:address location="http://localhost:54854/ServicioTextil.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

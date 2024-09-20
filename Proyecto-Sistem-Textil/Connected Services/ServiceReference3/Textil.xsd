@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/Textil.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/Textil.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/Textil.xsd" id="Textil" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="Textil">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Almacen">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" name="AlmacenID" type="xs:int" />
+              <xs:element name="Ubicacion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Referencia">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="cantidad" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Clientes">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" name="ClientesID" type="xs:int" />
+              <xs:element name="Nombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Apellido">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DNI">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Fecha" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="Telefono" type="xs:int" />
+              <xs:element minOccurs="0" name="Ruc" type="xs:int" />
+              <xs:element minOccurs="0" name="Email">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Ubicacion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="detalles_many_entregas">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" name="pedidomany" type="xs:int" />
+              <xs:element minOccurs="0" name="EntregaID" type="xs:int" />
+              <xs:element minOccurs="0" name="DetallePedidoClienteID" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="detalles_pedidos">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" name="DetalleID" type="xs:int" />
+              <xs:element minOccurs="0" name="PedidoID" type="xs:int" />
+              <xs:element minOccurs="0" name="ProductoID" type="xs:int" />
+              <xs:element name="Cantidad" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DetallesPedidoCliente">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" name="DetallePedidoClienteID" type="xs:int" />
+              <xs:element minOccurs="0" name="ProductoID" type="xs:int" />
+              <xs:element name="Cantidad" type="xs:int" />
+              <xs:element minOccurs="0" name="ClientesID" type="xs:int" />
+              <xs:element minOccurs="0" name="FechaPedido" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="Estado">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Empleados">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" name="EmpleadoID" type="xs:int" />
+              <xs:element name="Nombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Apellido">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DNI">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Rango">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Fecha" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="Email">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Sueldo" type="xs:decimal" />
+              <xs:element minOccurs="0" name="Telefono">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="EntradasInventario">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" name="EntradaID" type="xs:int" />
+              <xs:element name="FechaEntrada" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="ProductoID" type="xs:int" />
+              <xs:element name="Cantidad" type="xs:int" />
+              <xs:element minOccurs="0" name="ProveedorID" type="xs:int" />
+              <xs:element minOccurs="0" name="AlmacenID" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Entregas">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" name="EntregaID" type="xs:int" />
+              <xs:element name="FechaEntrega" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Pedidos_Proveedores">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" name="PedidoID" type="xs:int" />
+              <xs:element minOccurs="0" name="ProveedorID" type="xs:int" />
+              <xs:element name="FechaPedido" type="xs:dateTime" />
+              <xs:element name="Estado">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Productos">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" name="ProductoID" type="xs:int" />
+              <xs:element name="Nombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Descripcion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Categoria">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Stock" type="xs:int" />
+              <xs:element minOccurs="0" name="Ubicacion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Proveedores">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" name="ProveedorID" type="xs:int" />
+              <xs:element name="Nombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Contacto">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Telefono">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Email">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Direccion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SalidasInventario">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" name="SalidaID" type="xs:int" />
+              <xs:element name="FechaSalida" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="EmpleadoID" type="xs:int" />
+              <xs:element minOccurs="0" name="ProductoID" type="xs:int" />
+              <xs:element name="Cantidad" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="Constraint1">
+      <xs:selector xpath=".//mstns:Almacen" />
+      <xs:field xpath="mstns:AlmacenID" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="Clientes_Constraint1">
+      <xs:selector xpath=".//mstns:Clientes" />
+      <xs:field xpath="mstns:ClientesID" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="detalles_pedidos_Constraint1">
+      <xs:selector xpath=".//mstns:detalles_pedidos" />
+      <xs:field xpath="mstns:DetalleID" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="DetallesPedidoCliente_Constraint1">
+      <xs:selector xpath=".//mstns:DetallesPedidoCliente" />
+      <xs:field xpath="mstns:DetallePedidoClienteID" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="Empleados_Constraint1">
+      <xs:selector xpath=".//mstns:Empleados" />
+      <xs:field xpath="mstns:EmpleadoID" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="EntradasInventario_Constraint1">
+      <xs:selector xpath=".//mstns:EntradasInventario" />
+      <xs:field xpath="mstns:EntradaID" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="Entregas_Constraint1">
+      <xs:selector xpath=".//mstns:Entregas" />
+      <xs:field xpath="mstns:EntregaID" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="Pedidos_Proveedores_Constraint1">
+      <xs:selector xpath=".//mstns:Pedidos_Proveedores" />
+      <xs:field xpath="mstns:PedidoID" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="Productos_Constraint1">
+      <xs:selector xpath=".//mstns:Productos" />
+      <xs:field xpath="mstns:ProductoID" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="Proveedores_Constraint1">
+      <xs:selector xpath=".//mstns:Proveedores" />
+      <xs:field xpath="mstns:ProveedorID" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="SalidasInventario_Constraint1">
+      <xs:selector xpath=".//mstns:SalidasInventario" />
+      <xs:field xpath="mstns:SalidaID" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="FK__DetallesP__Clien__29221CFB" msdata:parent="Clientes" msdata:child="DetallesPedidoCliente" msdata:parentkey="ClientesID" msdata:childkey="ClientesID" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" />
+      <msdata:Relationship name="FK__detalles___Detal__2FCF1A8A" msdata:parent="DetallesPedidoCliente" msdata:child="detalles_many_entregas" msdata:parentkey="DetallePedidoClienteID" msdata:childkey="DetallePedidoClienteID" />
+      <msdata:Relationship name="FK__EntradasI__Almac__04E4BC85" msdata:parent="Almacen" msdata:child="EntradasInventario" msdata:parentkey="AlmacenID" msdata:childkey="AlmacenID" />
+      <msdata:Relationship name="FK__detalles___Entre__2DE6D218" msdata:parent="Entregas" msdata:child="detalles_many_entregas" msdata:parentkey="EntregaID" msdata:childkey="EntregaID" />
+      <msdata:Relationship name="FK__detalles___Pedid__46E78A0C" msdata:parent="Pedidos_Proveedores" msdata:child="detalles_pedidos" msdata:parentkey="PedidoID" msdata:childkey="PedidoID" />
+      <msdata:Relationship name="FK__detalles___Produ__47DBAE45" msdata:parent="Productos" msdata:child="detalles_pedidos" msdata:parentkey="ProductoID" msdata:childkey="ProductoID" />
+      <msdata:Relationship name="FK__DetallesP__Produ__5FB337D6" msdata:parent="Productos" msdata:child="DetallesPedidoCliente" msdata:parentkey="ProductoID" msdata:childkey="ProductoID" />
+      <msdata:Relationship name="FK__EntradasI__Produ__5165187F" msdata:parent="Productos" msdata:child="EntradasInventario" msdata:parentkey="ProductoID" msdata:childkey="ProductoID" />
+      <msdata:Relationship name="FK__EntradasI__Prove__52593CB8" msdata:parent="Proveedores" msdata:child="EntradasInventario" msdata:parentkey="ProveedorID" msdata:childkey="ProveedorID" />
+      <msdata:Relationship name="FK__Pedidos_P__Prove__440B1D61" msdata:parent="Proveedores" msdata:child="Pedidos_Proveedores" msdata:parentkey="ProveedorID" msdata:childkey="ProveedorID" />
+      <msdata:Relationship name="FK__SalidasIn__Emple__5535A963" msdata:parent="Empleados" msdata:child="SalidasInventario" msdata:parentkey="EmpleadoID" msdata:childkey="EmpleadoID" />
+      <msdata:Relationship name="FK__SalidasIn__Produ__5629CD9C" msdata:parent="Productos" msdata:child="SalidasInventario" msdata:parentkey="ProductoID" msdata:childkey="ProductoID" />
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="FK__DetallesP__Clien__29221CFB" msdata:parent="Clientes" msdata:child="DetallesPedidoCliente" msdata:parentkey="ClientesID" msdata:childkey="ClientesID" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" />
+      <msdata:Relationship name="FK__detalles___Detal__2FCF1A8A" msdata:parent="DetallesPedidoCliente" msdata:child="detalles_many_entregas" msdata:parentkey="DetallePedidoClienteID" msdata:childkey="DetallePedidoClienteID" />
+      <msdata:Relationship name="FK__EntradasI__Almac__04E4BC85" msdata:parent="Almacen" msdata:child="EntradasInventario" msdata:parentkey="AlmacenID" msdata:childkey="AlmacenID" />
+      <msdata:Relationship name="FK__detalles___Entre__2DE6D218" msdata:parent="Entregas" msdata:child="detalles_many_entregas" msdata:parentkey="EntregaID" msdata:childkey="EntregaID" />
+      <msdata:Relationship name="FK__detalles___Pedid__46E78A0C" msdata:parent="Pedidos_Proveedores" msdata:child="detalles_pedidos" msdata:parentkey="PedidoID" msdata:childkey="PedidoID" />
+      <msdata:Relationship name="FK__detalles___Produ__47DBAE45" msdata:parent="Productos" msdata:child="detalles_pedidos" msdata:parentkey="ProductoID" msdata:childkey="ProductoID" />
+      <msdata:Relationship name="FK__DetallesP__Produ__5FB337D6" msdata:parent="Productos" msdata:child="DetallesPedidoCliente" msdata:parentkey="ProductoID" msdata:childkey="ProductoID" />
+      <msdata:Relationship name="FK__EntradasI__Produ__5165187F" msdata:parent="Productos" msdata:child="EntradasInventario" msdata:parentkey="ProductoID" msdata:childkey="ProductoID" />
+      <msdata:Relationship name="FK__EntradasI__Prove__52593CB8" msdata:parent="Proveedores" msdata:child="EntradasInventario" msdata:parentkey="ProveedorID" msdata:childkey="ProveedorID" />
+      <msdata:Relationship name="FK__Pedidos_P__Prove__440B1D61" msdata:parent="Proveedores" msdata:child="Pedidos_Proveedores" msdata:parentkey="ProveedorID" msdata:childkey="ProveedorID" />
+      <msdata:Relationship name="FK__SalidasIn__Emple__5535A963" msdata:parent="Empleados" msdata:child="SalidasInventario" msdata:parentkey="EmpleadoID" msdata:childkey="EmpleadoID" />
+      <msdata:Relationship name="FK__SalidasIn__Produ__5629CD9C" msdata:parent="Productos" msdata:child="SalidasInventario" msdata:parentkey="ProductoID" msdata:childkey="ProductoID" />
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="FK__DetallesP__Clien__29221CFB" msdata:parent="Clientes" msdata:child="DetallesPedidoCliente" msdata:parentkey="ClientesID" msdata:childkey="ClientesID" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" />
+      <msdata:Relationship name="FK__detalles___Detal__2FCF1A8A" msdata:parent="DetallesPedidoCliente" msdata:child="detalles_many_entregas" msdata:parentkey="DetallePedidoClienteID" msdata:childkey="DetallePedidoClienteID" />
+      <msdata:Relationship name="FK__EntradasI__Almac__04E4BC85" msdata:parent="Almacen" msdata:child="EntradasInventario" msdata:parentkey="AlmacenID" msdata:childkey="AlmacenID" />
+      <msdata:Relationship name="FK__detalles___Entre__2DE6D218" msdata:parent="Entregas" msdata:child="detalles_many_entregas" msdata:parentkey="EntregaID" msdata:childkey="EntregaID" />
+      <msdata:Relationship name="FK__detalles___Pedid__46E78A0C" msdata:parent="Pedidos_Proveedores" msdata:child="detalles_pedidos" msdata:parentkey="PedidoID" msdata:childkey="PedidoID" />
+      <msdata:Relationship name="FK__detalles___Produ__47DBAE45" msdata:parent="Productos" msdata:child="detalles_pedidos" msdata:parentkey="ProductoID" msdata:childkey="ProductoID" />
+      <msdata:Relationship name="FK__DetallesP__Produ__5FB337D6" msdata:parent="Productos" msdata:child="DetallesPedidoCliente" msdata:parentkey="ProductoID" msdata:childkey="ProductoID" />
+      <msdata:Relationship name="FK__EntradasI__Produ__5165187F" msdata:parent="Productos" msdata:child="EntradasInventario" msdata:parentkey="ProductoID" msdata:childkey="ProductoID" />
+      <msdata:Relationship name="FK__EntradasI__Prove__52593CB8" msdata:parent="Proveedores" msdata:child="EntradasInventario" msdata:parentkey="ProveedorID" msdata:childkey="ProveedorID" />
+      <msdata:Relationship name="FK__Pedidos_P__Prove__440B1D61" msdata:parent="Proveedores" msdata:child="Pedidos_Proveedores" msdata:parentkey="ProveedorID" msdata:childkey="ProveedorID" />
+      <msdata:Relationship name="FK__SalidasIn__Emple__5535A963" msdata:parent="Empleados" msdata:child="SalidasInventario" msdata:parentkey="EmpleadoID" msdata:childkey="EmpleadoID" />
+      <msdata:Relationship name="FK__SalidasIn__Produ__5629CD9C" msdata:parent="Productos" msdata:child="SalidasInventario" msdata:parentkey="ProductoID" msdata:childkey="ProductoID" />
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="FK__DetallesP__Clien__29221CFB" msdata:parent="Clientes" msdata:child="DetallesPedidoCliente" msdata:parentkey="ClientesID" msdata:childkey="ClientesID" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" />
+      <msdata:Relationship name="FK__detalles___Detal__2FCF1A8A" msdata:parent="DetallesPedidoCliente" msdata:child="detalles_many_entregas" msdata:parentkey="DetallePedidoClienteID" msdata:childkey="DetallePedidoClienteID" />
+      <msdata:Relationship name="FK__EntradasI__Almac__04E4BC85" msdata:parent="Almacen" msdata:child="EntradasInventario" msdata:parentkey="AlmacenID" msdata:childkey="AlmacenID" />
+      <msdata:Relationship name="FK__detalles___Entre__2DE6D218" msdata:parent="Entregas" msdata:child="detalles_many_entregas" msdata:parentkey="EntregaID" msdata:childkey="EntregaID" />
+      <msdata:Relationship name="FK__detalles___Pedid__46E78A0C" msdata:parent="Pedidos_Proveedores" msdata:child="detalles_pedidos" msdata:parentkey="PedidoID" msdata:childkey="PedidoID" />
+      <msdata:Relationship name="FK__detalles___Produ__47DBAE45" msdata:parent="Productos" msdata:child="detalles_pedidos" msdata:parentkey="ProductoID" msdata:childkey="ProductoID" />
+      <msdata:Relationship name="FK__DetallesP__Produ__5FB337D6" msdata:parent="Productos" msdata:child="DetallesPedidoCliente" msdata:parentkey="ProductoID" msdata:childkey="ProductoID" />
+      <msdata:Relationship name="FK__EntradasI__Produ__5165187F" msdata:parent="Productos" msdata:child="EntradasInventario" msdata:parentkey="ProductoID" msdata:childkey="ProductoID" />
+      <msdata:Relationship name="FK__EntradasI__Prove__52593CB8" msdata:parent="Proveedores" msdata:child="EntradasInventario" msdata:parentkey="ProveedorID" msdata:childkey="ProveedorID" />
+      <msdata:Relationship name="FK__Pedidos_P__Prove__440B1D61" msdata:parent="Proveedores" msdata:child="Pedidos_Proveedores" msdata:parentkey="ProveedorID" msdata:childkey="ProveedorID" />
+      <msdata:Relationship name="FK__SalidasIn__Emple__5535A963" msdata:parent="Empleados" msdata:child="SalidasInventario" msdata:parentkey="EmpleadoID" msdata:childkey="EmpleadoID" />
+      <msdata:Relationship name="FK__SalidasIn__Produ__5629CD9C" msdata:parent="Productos" msdata:child="SalidasInventario" msdata:parentkey="ProductoID" msdata:childkey="ProductoID" />
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="FK__DetallesP__Clien__29221CFB" msdata:parent="Clientes" msdata:child="DetallesPedidoCliente" msdata:parentkey="ClientesID" msdata:childkey="ClientesID" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" />
+      <msdata:Relationship name="FK__detalles___Detal__2FCF1A8A" msdata:parent="DetallesPedidoCliente" msdata:child="detalles_many_entregas" msdata:parentkey="DetallePedidoClienteID" msdata:childkey="DetallePedidoClienteID" />
+      <msdata:Relationship name="FK__EntradasI__Almac__04E4BC85" msdata:parent="Almacen" msdata:child="EntradasInventario" msdata:parentkey="AlmacenID" msdata:childkey="AlmacenID" />
+      <msdata:Relationship name="FK__detalles___Entre__2DE6D218" msdata:parent="Entregas" msdata:child="detalles_many_entregas" msdata:parentkey="EntregaID" msdata:childkey="EntregaID" />
+      <msdata:Relationship name="FK__detalles___Pedid__46E78A0C" msdata:parent="Pedidos_Proveedores" msdata:child="detalles_pedidos" msdata:parentkey="PedidoID" msdata:childkey="PedidoID" />
+      <msdata:Relationship name="FK__detalles___Produ__47DBAE45" msdata:parent="Productos" msdata:child="detalles_pedidos" msdata:parentkey="ProductoID" msdata:childkey="ProductoID" />
+      <msdata:Relationship name="FK__DetallesP__Produ__5FB337D6" msdata:parent="Productos" msdata:child="DetallesPedidoCliente" msdata:parentkey="ProductoID" msdata:childkey="ProductoID" />
+      <msdata:Relationship name="FK__EntradasI__Produ__5165187F" msdata:parent="Productos" msdata:child="EntradasInventario" msdata:parentkey="ProductoID" msdata:childkey="ProductoID" />
+      <msdata:Relationship name="FK__EntradasI__Prove__52593CB8" msdata:parent="Proveedores" msdata:child="EntradasInventario" msdata:parentkey="ProveedorID" msdata:childkey="ProveedorID" />
+      <msdata:Relationship name="FK__Pedidos_P__Prove__440B1D61" msdata:parent="Proveedores" msdata:child="Pedidos_Proveedores" msdata:parentkey="ProveedorID" msdata:childkey="ProveedorID" />
+      <msdata:Relationship name="FK__SalidasIn__Emple__5535A963" msdata:parent="Empleados" msdata:child="SalidasInventario" msdata:parentkey="EmpleadoID" msdata:childkey="EmpleadoID" />
+      <msdata:Relationship name="FK__SalidasIn__Produ__5629CD9C" msdata:parent="Productos" msdata:child="SalidasInventario" msdata:parentkey="ProductoID" msdata:childkey="ProductoID" />
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="FK__DetallesP__Clien__29221CFB" msdata:parent="Clientes" msdata:child="DetallesPedidoCliente" msdata:parentkey="ClientesID" msdata:childkey="ClientesID" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" />
+      <msdata:Relationship name="FK__detalles___Detal__2FCF1A8A" msdata:parent="DetallesPedidoCliente" msdata:child="detalles_many_entregas" msdata:parentkey="DetallePedidoClienteID" msdata:childkey="DetallePedidoClienteID" />
+      <msdata:Relationship name="FK__EntradasI__Almac__04E4BC85" msdata:parent="Almacen" msdata:child="EntradasInventario" msdata:parentkey="AlmacenID" msdata:childkey="AlmacenID" />
+      <msdata:Relationship name="FK__detalles___Entre__2DE6D218" msdata:parent="Entregas" msdata:child="detalles_many_entregas" msdata:parentkey="EntregaID" msdata:childkey="EntregaID" />
+      <msdata:Relationship name="FK__detalles___Pedid__46E78A0C" msdata:parent="Pedidos_Proveedores" msdata:child="detalles_pedidos" msdata:parentkey="PedidoID" msdata:childkey="PedidoID" />
+      <msdata:Relationship name="FK__detalles___Produ__47DBAE45" msdata:parent="Productos" msdata:child="detalles_pedidos" msdata:parentkey="ProductoID" msdata:childkey="ProductoID" />
+      <msdata:Relationship name="FK__DetallesP__Produ__5FB337D6" msdata:parent="Productos" msdata:child="DetallesPedidoCliente" msdata:parentkey="ProductoID" msdata:childkey="ProductoID" />
+      <msdata:Relationship name="FK__EntradasI__Produ__5165187F" msdata:parent="Productos" msdata:child="EntradasInventario" msdata:parentkey="ProductoID" msdata:childkey="ProductoID" />
+      <msdata:Relationship name="FK__EntradasI__Prove__52593CB8" msdata:parent="Proveedores" msdata:child="EntradasInventario" msdata:parentkey="ProveedorID" msdata:childkey="ProveedorID" />
+      <msdata:Relationship name="FK__Pedidos_P__Prove__440B1D61" msdata:parent="Proveedores" msdata:child="Pedidos_Proveedores" msdata:parentkey="ProveedorID" msdata:childkey="ProveedorID" />
+      <msdata:Relationship name="FK__SalidasIn__Emple__5535A963" msdata:parent="Empleados" msdata:child="SalidasInventario" msdata:parentkey="EmpleadoID" msdata:childkey="EmpleadoID" />
+      <msdata:Relationship name="FK__SalidasIn__Produ__5629CD9C" msdata:parent="Productos" msdata:child="SalidasInventario" msdata:parentkey="ProductoID" msdata:childkey="ProductoID" />
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="FK__DetallesP__Clien__29221CFB" msdata:parent="Clientes" msdata:child="DetallesPedidoCliente" msdata:parentkey="ClientesID" msdata:childkey="ClientesID" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" />
+      <msdata:Relationship name="FK__detalles___Detal__2FCF1A8A" msdata:parent="DetallesPedidoCliente" msdata:child="detalles_many_entregas" msdata:parentkey="DetallePedidoClienteID" msdata:childkey="DetallePedidoClienteID" />
+      <msdata:Relationship name="FK__EntradasI__Almac__04E4BC85" msdata:parent="Almacen" msdata:child="EntradasInventario" msdata:parentkey="AlmacenID" msdata:childkey="AlmacenID" />
+      <msdata:Relationship name="FK__detalles___Entre__2DE6D218" msdata:parent="Entregas" msdata:child="detalles_many_entregas" msdata:parentkey="EntregaID" msdata:childkey="EntregaID" />
+      <msdata:Relationship name="FK__detalles___Pedid__46E78A0C" msdata:parent="Pedidos_Proveedores" msdata:child="detalles_pedidos" msdata:parentkey="PedidoID" msdata:childkey="PedidoID" />
+      <msdata:Relationship name="FK__detalles___Produ__47DBAE45" msdata:parent="Productos" msdata:child="detalles_pedidos" msdata:parentkey="ProductoID" msdata:childkey="ProductoID" />
+      <msdata:Relationship name="FK__DetallesP__Produ__5FB337D6" msdata:parent="Productos" msdata:child="DetallesPedidoCliente" msdata:parentkey="ProductoID" msdata:childkey="ProductoID" />
+      <msdata:Relationship name="FK__EntradasI__Produ__5165187F" msdata:parent="Productos" msdata:child="EntradasInventario" msdata:parentkey="ProductoID" msdata:childkey="ProductoID" />
+      <msdata:Relationship name="FK__EntradasI__Prove__52593CB8" msdata:parent="Proveedores" msdata:child="EntradasInventario" msdata:parentkey="ProveedorID" msdata:childkey="ProveedorID" />
+      <msdata:Relationship name="FK__Pedidos_P__Prove__440B1D61" msdata:parent="Proveedores" msdata:child="Pedidos_Proveedores" msdata:parentkey="ProveedorID" msdata:childkey="ProveedorID" />
+      <msdata:Relationship name="FK__SalidasIn__Emple__5535A963" msdata:parent="Empleados" msdata:child="SalidasInventario" msdata:parentkey="EmpleadoID" msdata:childkey="EmpleadoID" />
+      <msdata:Relationship name="FK__SalidasIn__Produ__5629CD9C" msdata:parent="Productos" msdata:child="SalidasInventario" msdata:parentkey="ProductoID" msdata:childkey="ProductoID" />
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="FK__DetallesP__Clien__29221CFB" msdata:parent="Clientes" msdata:child="DetallesPedidoCliente" msdata:parentkey="ClientesID" msdata:childkey="ClientesID" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" />
+      <msdata:Relationship name="FK__detalles___Detal__2FCF1A8A" msdata:parent="DetallesPedidoCliente" msdata:child="detalles_many_entregas" msdata:parentkey="DetallePedidoClienteID" msdata:childkey="DetallePedidoClienteID" />
+      <msdata:Relationship name="FK__EntradasI__Almac__04E4BC85" msdata:parent="Almacen" msdata:child="EntradasInventario" msdata:parentkey="AlmacenID" msdata:childkey="AlmacenID" />
+      <msdata:Relationship name="FK__detalles___Entre__2DE6D218" msdata:parent="Entregas" msdata:child="detalles_many_entregas" msdata:parentkey="EntregaID" msdata:childkey="EntregaID" />
+      <msdata:Relationship name="FK__detalles___Pedid__46E78A0C" msdata:parent="Pedidos_Proveedores" msdata:child="detalles_pedidos" msdata:parentkey="PedidoID" msdata:childkey="PedidoID" />
+      <msdata:Relationship name="FK__detalles___Produ__47DBAE45" msdata:parent="Productos" msdata:child="detalles_pedidos" msdata:parentkey="ProductoID" msdata:childkey="ProductoID" />
+      <msdata:Relationship name="FK__DetallesP__Produ__5FB337D6" msdata:parent="Productos" msdata:child="DetallesPedidoCliente" msdata:parentkey="ProductoID" msdata:childkey="ProductoID" />
+      <msdata:Relationship name="FK__EntradasI__Produ__5165187F" msdata:parent="Productos" msdata:child="EntradasInventario" msdata:parentkey="ProductoID" msdata:childkey="ProductoID" />
+      <msdata:Relationship name="FK__EntradasI__Prove__52593CB8" msdata:parent="Proveedores" msdata:child="EntradasInventario" msdata:parentkey="ProveedorID" msdata:childkey="ProveedorID" />
+      <msdata:Relationship name="FK__Pedidos_P__Prove__440B1D61" msdata:parent="Proveedores" msdata:child="Pedidos_Proveedores" msdata:parentkey="ProveedorID" msdata:childkey="ProveedorID" />
+      <msdata:Relationship name="FK__SalidasIn__Emple__5535A963" msdata:parent="Empleados" msdata:child="SalidasInventario" msdata:parentkey="EmpleadoID" msdata:childkey="EmpleadoID" />
+      <msdata:Relationship name="FK__SalidasIn__Produ__5629CD9C" msdata:parent="Productos" msdata:child="SalidasInventario" msdata:parentkey="ProductoID" msdata:childkey="ProductoID" />
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="FK__DetallesP__Clien__29221CFB" msdata:parent="Clientes" msdata:child="DetallesPedidoCliente" msdata:parentkey="ClientesID" msdata:childkey="ClientesID" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" />
+      <msdata:Relationship name="FK__detalles___Detal__2FCF1A8A" msdata:parent="DetallesPedidoCliente" msdata:child="detalles_many_entregas" msdata:parentkey="DetallePedidoClienteID" msdata:childkey="DetallePedidoClienteID" />
+      <msdata:Relationship name="FK__EntradasI__Almac__04E4BC85" msdata:parent="Almacen" msdata:child="EntradasInventario" msdata:parentkey="AlmacenID" msdata:childkey="AlmacenID" />
+      <msdata:Relationship name="FK__detalles___Entre__2DE6D218" msdata:parent="Entregas" msdata:child="detalles_many_entregas" msdata:parentkey="EntregaID" msdata:childkey="EntregaID" />
+      <msdata:Relationship name="FK__detalles___Pedid__46E78A0C" msdata:parent="Pedidos_Proveedores" msdata:child="detalles_pedidos" msdata:parentkey="PedidoID" msdata:childkey="PedidoID" />
+      <msdata:Relationship name="FK__detalles___Produ__47DBAE45" msdata:parent="Productos" msdata:child="detalles_pedidos" msdata:parentkey="ProductoID" msdata:childkey="ProductoID" />
+      <msdata:Relationship name="FK__DetallesP__Produ__5FB337D6" msdata:parent="Productos" msdata:child="DetallesPedidoCliente" msdata:parentkey="ProductoID" msdata:childkey="ProductoID" />
+      <msdata:Relationship name="FK__EntradasI__Produ__5165187F" msdata:parent="Productos" msdata:child="EntradasInventario" msdata:parentkey="ProductoID" msdata:childkey="ProductoID" />
+      <msdata:Relationship name="FK__EntradasI__Prove__52593CB8" msdata:parent="Proveedores" msdata:child="EntradasInventario" msdata:parentkey="ProveedorID" msdata:childkey="ProveedorID" />
+      <msdata:Relationship name="FK__Pedidos_P__Prove__440B1D61" msdata:parent="Proveedores" msdata:child="Pedidos_Proveedores" msdata:parentkey="ProveedorID" msdata:childkey="ProveedorID" />
+      <msdata:Relationship name="FK__SalidasIn__Emple__5535A963" msdata:parent="Empleados" msdata:child="SalidasInventario" msdata:parentkey="EmpleadoID" msdata:childkey="EmpleadoID" />
+      <msdata:Relationship name="FK__SalidasIn__Produ__5629CD9C" msdata:parent="Productos" msdata:child="SalidasInventario" msdata:parentkey="ProductoID" msdata:childkey="ProductoID" />
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="FK__DetallesP__Clien__29221CFB" msdata:parent="Clientes" msdata:child="DetallesPedidoCliente" msdata:parentkey="ClientesID" msdata:childkey="ClientesID" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" />
+      <msdata:Relationship name="FK__detalles___Detal__2FCF1A8A" msdata:parent="DetallesPedidoCliente" msdata:child="detalles_many_entregas" msdata:parentkey="DetallePedidoClienteID" msdata:childkey="DetallePedidoClienteID" />
+      <msdata:Relationship name="FK__EntradasI__Almac__04E4BC85" msdata:parent="Almacen" msdata:child="EntradasInventario" msdata:parentkey="AlmacenID" msdata:childkey="AlmacenID" />
+      <msdata:Relationship name="FK__detalles___Entre__2DE6D218" msdata:parent="Entregas" msdata:child="detalles_many_entregas" msdata:parentkey="EntregaID" msdata:childkey="EntregaID" />
+      <msdata:Relationship name="FK__detalles___Pedid__46E78A0C" msdata:parent="Pedidos_Proveedores" msdata:child="detalles_pedidos" msdata:parentkey="PedidoID" msdata:childkey="PedidoID" />
+      <msdata:Relationship name="FK__detalles___Produ__47DBAE45" msdata:parent="Productos" msdata:child="detalles_pedidos" msdata:parentkey="ProductoID" msdata:childkey="ProductoID" />
+      <msdata:Relationship name="FK__DetallesP__Produ__5FB337D6" msdata:parent="Productos" msdata:child="DetallesPedidoCliente" msdata:parentkey="ProductoID" msdata:childkey="ProductoID" />
+      <msdata:Relationship name="FK__EntradasI__Produ__5165187F" msdata:parent="Productos" msdata:child="EntradasInventario" msdata:parentkey="ProductoID" msdata:childkey="ProductoID" />
+      <msdata:Relationship name="FK__EntradasI__Prove__52593CB8" msdata:parent="Proveedores" msdata:child="EntradasInventario" msdata:parentkey="ProveedorID" msdata:childkey="ProveedorID" />
+      <msdata:Relationship name="FK__Pedidos_P__Prove__440B1D61" msdata:parent="Proveedores" msdata:child="Pedidos_Proveedores" msdata:parentkey="ProveedorID" msdata:childkey="ProveedorID" />
+      <msdata:Relationship name="FK__SalidasIn__Emple__5535A963" msdata:parent="Empleados" msdata:child="SalidasInventario" msdata:parentkey="EmpleadoID" msdata:childkey="EmpleadoID" />
+      <msdata:Relationship name="FK__SalidasIn__Produ__5629CD9C" msdata:parent="Productos" msdata:child="SalidasInventario" msdata:parentkey="ProductoID" msdata:childkey="ProductoID" />
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="FK__DetallesP__Clien__29221CFB" msdata:parent="Clientes" msdata:child="DetallesPedidoCliente" msdata:parentkey="ClientesID" msdata:childkey="ClientesID" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" />
+      <msdata:Relationship name="FK__detalles___Detal__2FCF1A8A" msdata:parent="DetallesPedidoCliente" msdata:child="detalles_many_entregas" msdata:parentkey="DetallePedidoClienteID" msdata:childkey="DetallePedidoClienteID" />
+      <msdata:Relationship name="FK__EntradasI__Almac__04E4BC85" msdata:parent="Almacen" msdata:child="EntradasInventario" msdata:parentkey="AlmacenID" msdata:childkey="AlmacenID" />
+      <msdata:Relationship name="FK__detalles___Entre__2DE6D218" msdata:parent="Entregas" msdata:child="detalles_many_entregas" msdata:parentkey="EntregaID" msdata:childkey="EntregaID" />
+      <msdata:Relationship name="FK__detalles___Pedid__46E78A0C" msdata:parent="Pedidos_Proveedores" msdata:child="detalles_pedidos" msdata:parentkey="PedidoID" msdata:childkey="PedidoID" />
+      <msdata:Relationship name="FK__detalles___Produ__47DBAE45" msdata:parent="Productos" msdata:child="detalles_pedidos" msdata:parentkey="ProductoID" msdata:childkey="ProductoID" />
+      <msdata:Relationship name="FK__DetallesP__Produ__5FB337D6" msdata:parent="Productos" msdata:child="DetallesPedidoCliente" msdata:parentkey="ProductoID" msdata:childkey="ProductoID" />
+      <msdata:Relationship name="FK__EntradasI__Produ__5165187F" msdata:parent="Productos" msdata:child="EntradasInventario" msdata:parentkey="ProductoID" msdata:childkey="ProductoID" />
+      <msdata:Relationship name="FK__EntradasI__Prove__52593CB8" msdata:parent="Proveedores" msdata:child="EntradasInventario" msdata:parentkey="ProveedorID" msdata:childkey="ProveedorID" />
+      <msdata:Relationship name="FK__Pedidos_P__Prove__440B1D61" msdata:parent="Proveedores" msdata:child="Pedidos_Proveedores" msdata:parentkey="ProveedorID" msdata:childkey="ProveedorID" />
+      <msdata:Relationship name="FK__SalidasIn__Emple__5535A963" msdata:parent="Empleados" msdata:child="SalidasInventario" msdata:parentkey="EmpleadoID" msdata:childkey="EmpleadoID" />
+      <msdata:Relationship name="FK__SalidasIn__Produ__5629CD9C" msdata:parent="Productos" msdata:child="SalidasInventario" msdata:parentkey="ProductoID" msdata:childkey="ProductoID" />
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="FK__DetallesP__Clien__29221CFB" msdata:parent="Clientes" msdata:child="DetallesPedidoCliente" msdata:parentkey="ClientesID" msdata:childkey="ClientesID" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" />
+      <msdata:Relationship name="FK__detalles___Detal__2FCF1A8A" msdata:parent="DetallesPedidoCliente" msdata:child="detalles_many_entregas" msdata:parentkey="DetallePedidoClienteID" msdata:childkey="DetallePedidoClienteID" />
+      <msdata:Relationship name="FK__EntradasI__Almac__04E4BC85" msdata:parent="Almacen" msdata:child="EntradasInventario" msdata:parentkey="AlmacenID" msdata:childkey="AlmacenID" />
+      <msdata:Relationship name="FK__detalles___Entre__2DE6D218" msdata:parent="Entregas" msdata:child="detalles_many_entregas" msdata:parentkey="EntregaID" msdata:childkey="EntregaID" />
+      <msdata:Relationship name="FK__detalles___Pedid__46E78A0C" msdata:parent="Pedidos_Proveedores" msdata:child="detalles_pedidos" msdata:parentkey="PedidoID" msdata:childkey="PedidoID" />
+      <msdata:Relationship name="FK__detalles___Produ__47DBAE45" msdata:parent="Productos" msdata:child="detalles_pedidos" msdata:parentkey="ProductoID" msdata:childkey="ProductoID" />
+      <msdata:Relationship name="FK__DetallesP__Produ__5FB337D6" msdata:parent="Productos" msdata:child="DetallesPedidoCliente" msdata:parentkey="ProductoID" msdata:childkey="ProductoID" />
+      <msdata:Relationship name="FK__EntradasI__Produ__5165187F" msdata:parent="Productos" msdata:child="EntradasInventario" msdata:parentkey="ProductoID" msdata:childkey="ProductoID" />
+      <msdata:Relationship name="FK__EntradasI__Prove__52593CB8" msdata:parent="Proveedores" msdata:child="EntradasInventario" msdata:parentkey="ProveedorID" msdata:childkey="ProveedorID" />
+      <msdata:Relationship name="FK__Pedidos_P__Prove__440B1D61" msdata:parent="Proveedores" msdata:child="Pedidos_Proveedores" msdata:parentkey="ProveedorID" msdata:childkey="ProveedorID" />
+      <msdata:Relationship name="FK__SalidasIn__Emple__5535A963" msdata:parent="Empleados" msdata:child="SalidasInventario" msdata:parentkey="EmpleadoID" msdata:childkey="EmpleadoID" />
+      <msdata:Relationship name="FK__SalidasIn__Produ__5629CD9C" msdata:parent="Productos" msdata:child="SalidasInventario" msdata:parentkey="ProductoID" msdata:childkey="ProductoID" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>
