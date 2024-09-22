@@ -15,15 +15,6 @@ namespace Proyecto_Sistem_Textil
     {
 
         /// <summary>
-        /// Control form1.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-
-        /// <summary>
         /// Control txtnombre.
         /// </summary>
         /// <remarks>
@@ -60,13 +51,13 @@ namespace Proyecto_Sistem_Textil
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvpassword;
 
         /// <summary>
-        /// Control btnenviar.
+        /// Control Button1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnenviar;
+        protected global::System.Web.UI.WebControls.Button Button1;
 
         /// <summary>
         /// Control lblmensaje.

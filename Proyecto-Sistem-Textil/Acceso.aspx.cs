@@ -28,9 +28,8 @@ namespace Proyecto_Sistem_Textil
             {
                 string dni = txtDNI.Text;
                 Response.Redirect("Principal.aspx");
-                Response.Redirect("Principal.aspx?txtDNI=" +  dni);
+                Response.Redirect("Principal.aspx?txtDNI=" + dni);
             }
-        }
-
+        }        
     }
 }

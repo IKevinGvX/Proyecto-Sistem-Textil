@@ -135,7 +135,7 @@
     <Content Include="Principal.aspx" />
     <Content Include="Producto.aspx" />
     <Content Include="Proveedores.aspx" />
-    <Content Include="style.css" />
+    <Content Include="estilo.css" />
     <Content Include="test.asmx" />
     <Content Include="Web.config" />
   </ItemGroup>
