@@ -1,6 +1,9 @@
 ﻿@import "https://fonts.googleapis.com/css?family=Ubuntu:400,700italic";
 @import "https://fonts.googleapis.com/css?family=Cabin:400";
 
+button.btn-space {
+    margin-left: 1em;
+}
 * {
     box-sizing: border-box;
 }

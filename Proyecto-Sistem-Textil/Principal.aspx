@@ -88,7 +88,7 @@
                     <div class="nav-content">
        <h4 class="center">INGRESAR API SWAGGER</h4>
       <ul class="tabs tabs-transparent center">
-      <asp:Button OnClick="Vistaproductop_click" ID="Button4" runat="server" CssClass="btn" Text="Proveedores" />
+      <asp:Button  ID="Button4" runat="server" CssClass="btn" Text="Proveedores" />
       <asp:Button ID="Button3" runat="server" CssClass="btn" Text="Almacen" />
       <asp:Button ID="Button1" runat="server" CssClass="btn" Text="Clientes" />
       <asp:Button ID="Button2" runat="server" CssClass="btn" Text="Empleados" />

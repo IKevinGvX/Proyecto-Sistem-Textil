@@ -1,11 +1,11 @@
-﻿﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Acceso.aspx.cs" Inherits="Proyecto_Sistem_Textil.Acceso" %>
+﻿﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="Proyecto_Sistem_Textil.Acceso" %>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animated Login Page</title>
+    <title>LogginTextil</title>
     <link rel="stylesheet" href="estilo.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
@@ -13,7 +13,7 @@
 </head>
 <body>
     <div id="logo"> 
-        <h1><i> Wecome Services Web Sallco Textil</i></h1>
+        <h1><i> Welcome Services Web Sallco Textil</i></h1>
       </div> 
       <section class="stark-login">
         <form class= "login-card" runat="server">	
@@ -24,7 +24,7 @@
                 ErrorMessage="Debe Ingresar Nombre Completo"  ForeColor="Red"></asp:RequiredFieldValidator>
               </div>
             <div id="fade-box">
-            <asp:TextBox id="txtDNI"  Text="Ingresa Tu DNI" runat="server" Width="300px" Height="35px"></asp:TextBox>
+            <asp:TextBox id="txtDNI"  TextMode="Password" runat="server" Width="300px" Height="35px"></asp:TextBox>
             <asp:RequiredFieldValidator ID="rfvpassword" runat="server" ControlToValidate="txtDNI"
                 ErrorMessage="Debe Ingresar DNI Correcta" ForeColor ="Red"></asp:RequiredFieldValidator>
              <div id="fade-box">
