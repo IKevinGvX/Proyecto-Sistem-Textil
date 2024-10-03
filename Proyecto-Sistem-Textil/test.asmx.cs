@@ -15,7 +15,7 @@ namespace Proyecto_Sistem_Textil
     /// <summary>
     /// Descripción breve de test
     /// </summary>
-    [WebService(Namespace = "http://testteobasededatos.asmx")]
+    [WebService(Namespace = "http://industrissallco.somee.com/asmx/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
     // Para permitir que se llame a este servicio web desde un script, usando ASP.NET AJAX, quite la marca de comentario de la línea siguiente. 

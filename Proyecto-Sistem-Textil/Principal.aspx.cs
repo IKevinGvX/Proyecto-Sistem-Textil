@@ -4,6 +4,7 @@ using Proyecto_Sistem_Textil.ServiceReference1;
 using Swashbuckle.Swagger;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Net.Http;
 using System.Web;
@@ -23,6 +24,9 @@ namespace Proyecto_Sistem_Textil
         }
         protected void Vistaproductop_click(object sender, EventArgs e)
         {
+            ServiceReference2.testSoapClient servicio = new ServiceReference2.testSoapClient();
+            servicio.GetDataAlmacen();
+
         }
     }
 }

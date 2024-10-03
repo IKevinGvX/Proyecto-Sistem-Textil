@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace AlmacenSwagger.Migrations
+namespace TextilSwagger.Migrations
 {
     /// <inheritdoc />
     public partial class Almacen : Migration
@@ -15,7 +15,7 @@ namespace AlmacenSwagger.Migrations
                 columns: table => new
                 {
                     almacenid = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                        .Annotation("SqlServer:Identity", "10000, 5"),
                     ubicacion = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     referencia = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     cantidad = table.Column<int>(type: "int", nullable: false)

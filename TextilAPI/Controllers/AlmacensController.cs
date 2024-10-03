@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using AlmacenSwagger.Models;
 using TextilAPI.Models;
+using Microsoft.DotNet.Scaffolding.Shared.Messaging;
 
 namespace AlmacenSwagger.Controllers
 {
@@ -29,7 +30,7 @@ namespace AlmacenSwagger.Controllers
         }
 
         // GET: api/Almacens/5
-        [HttpGet("SearchByIDAlmacen{id}")]
+        [HttpGet("SearchByIDAlmacen")]
         public async Task<ActionResult<Almacen>> GetAlmacen(int id)
         {
             var almacen = await _context.Almacen.FindAsync(id);
@@ -44,12 +45,12 @@ namespace AlmacenSwagger.Controllers
 
         // PUT: api/Almacens/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("ActualizarAlmacen{id}")]
+        [HttpPut("actualizaralmacen/{id}")]
         public async Task<IActionResult> PutAlmacen(int id, Almacen almacen)
         {
             if (id != almacen.almacenid)
             {
-                return BadRequest();
+                return BadRequest(new { message = "El ID del almacen no coincide con el de la URL."});
             }
 
             _context.Entry(almacen).State = EntityState.Modified;
@@ -62,7 +63,7 @@ namespace AlmacenSwagger.Controllers
             {
                 if (!AlmacenExists(id))
                 {
-                    return NotFound();
+                    return NotFound(new { message = "Almacen no encontrado." });
                 }
                 else
                 {
@@ -85,7 +86,7 @@ namespace AlmacenSwagger.Controllers
         }
 
         // DELETE: api/Almacens/5
-        [HttpDelete("EliminarAlmacen    {id}")]
+        [HttpDelete("EliminarAlmacen")]
         public async Task<IActionResult> DeleteAlmacen(int id)
         {
             var almacen = await _context.Almacen.FindAsync(id);
